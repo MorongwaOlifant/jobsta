@@ -25,9 +25,4 @@ yarn-error.log*
 node_modules/
 .cache/
 .env
-
-node_modules/
-.env
-.DS_Store
-logs/
-*.log
+frontend/build

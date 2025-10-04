@@ -1,3 +1,4 @@
+// server.js
 require("dotenv").config();
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
@@ -30,6 +31,6 @@ app.get("/", (req, res) => {
 (async () => {
   await connectDB();
   app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`✅ Server running on http://localhost:${PORT}`);
   });
 })();

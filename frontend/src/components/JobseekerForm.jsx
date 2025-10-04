@@ -76,12 +76,12 @@ function JobseekerForm() {
           {[
             ["name", "Full Name"],
             ["location", "Location"],
-            ["jobInterest", "Job Interest"],
+            ["jobInterest", "Job type filtering (e.g. Retail, IT, Sales)"],
             ["availability", "Availability (e.g., Immediate, 1 Week)"],
             ["qualification", "Highest Qualification"],
-            ["fieldOfStudy", "Field of Study"],
+            ["fieldOfStudy", "Matching to specific industries (e.g. IT, HR)"],
             ["experience", "Experience (e.g., 2 years retail)"],
-            ["skills", "Skills (comma separated)"],
+            ["skills", "e.g. JavaScript, POS (comma separated)"],
             ["language", "Preferred Language"],
           ].map(([key, label]) => (
             <div key={key}>

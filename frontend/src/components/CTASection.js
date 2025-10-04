@@ -40,7 +40,7 @@ function CTASection() {
               <div className="space-y-4">
                 <button
                   onClick={() => {
-                    window.open("https://wa.me/27820000000?text=Hi+Jobsta", "_blank");
+                    window.open("https://wa.me/27678044796?text=Hi+Jobsta", "_blank");
                     setShowOptions(false);
                   }}
                   className="w-full bg-[#25D366] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1da851] transition"

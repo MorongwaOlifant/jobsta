@@ -1,7 +1,7 @@
 // src/components/HeroSection.js
 
 import React from 'react';
-import { MessageCircle, Star, ArrowRight } from 'react-feather';
+import { MessageCircle, ArrowRight } from 'react-feather';
 
 function HeroSection() {
   const whatsappLink = "https://wa.me/27820000000?text=Hi+Jobsta";
