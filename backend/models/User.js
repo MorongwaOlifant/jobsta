@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
   name: String,
+  whatsappNumber: String,
   location: String,
   jobInterest: String,
   availability: String,

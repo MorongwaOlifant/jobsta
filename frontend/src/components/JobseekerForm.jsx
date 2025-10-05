@@ -4,6 +4,7 @@ import axios from "axios";
 function JobseekerForm() {
   const [formData, setFormData] = useState({
     name: "",
+    whatsappNumber: "",
     location: "",
     jobInterest: "",
     availability: "",
@@ -21,6 +22,7 @@ function JobseekerForm() {
     const newErrors = {};
     if (formData.name.length < 3) newErrors.name = "Name is too short";
     if (!formData.jobInterest) newErrors.jobInterest = "Required";
+    if (!/^\+27[0-9]{9}$/.test(formData.whatsappNumber)) newErrors.whatsappNumber = "Must be +27XXXXXXXXX";
     return newErrors;
   };
 
@@ -45,6 +47,7 @@ function JobseekerForm() {
       setSuccess(true);
       setFormData({
         name: "",
+        whatsappNumber: "",
         location: "",
         jobInterest: "",
         availability: "",
@@ -75,6 +78,7 @@ function JobseekerForm() {
         <form onSubmit={handleSubmit} className="space-y-4">
           {[
             ["name", "Full Name"],
+            ["whatsappNumber", "WhatsApp Number (+27XXXXXXXXX)"],
             ["location", "Location"],
             ["jobInterest", "Job type filtering (e.g. Retail, IT, Sales)"],
             ["availability", "Availability (e.g., Immediate, 1 Week)"],
@@ -86,10 +90,12 @@ function JobseekerForm() {
           ].map(([key, label]) => (
             <div key={key}>
               <input
+                type={key === 'whatsappNumber' ? 'tel' : 'text'}
                 name={key}
                 value={formData[key]}
                 onChange={handleChange}
                 placeholder={label}
+                pattern={key === 'whatsappNumber' ? '\\+27[0-9]{9}' : undefined}
                 className={`w-full p-3 border rounded-md ${
                   errors[key] ? "border-red-500" : ""
                 }`}

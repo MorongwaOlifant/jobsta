@@ -23,7 +23,8 @@ const userSessions = {};
 
 const questions = [
   "✅ Welcome to Jobsta! Let’s build your job profile. What’s your *name & surname)*?",
-  "📍 What’s your *location*? (e.g. Cape Town)",
+  "📞 What’s your WhatsApp number? (e.g. +27612345678)",
+  "� What’s your *location*? (e.g. Cape Town)",
   "💼 What type of *job* are you interested in? (e.g. Software Development Intership)",
   "⏳ What’s your *availability*? (e.g. Immediate, 1 week)",
   "🎓 What’s your *highest qualification*?",
@@ -36,6 +37,7 @@ const questions = [
 
 const fields = [
   "name",
+  "whatsappNumber",
   "location",
   "jobInterest",
   "availability",
@@ -61,6 +63,10 @@ const handleUserMessage = async (userId, message) => {
 
   if (step < fields.length) {
     const field = fields[step];
+
+    if (field === 'whatsappNumber' && !message.startsWith('+27')) {
+      return "Please enter a valid SA WhatsApp number starting with +27 (e.g. +27612345678).";
+    }
 
     if (field === 'skills') {
       session.data[field] = message.split(',').map(skill => skill.trim()); // Convert to array

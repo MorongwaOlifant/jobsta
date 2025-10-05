@@ -4,7 +4,7 @@ import React from 'react';
 import { MessageCircle, ArrowRight } from 'react-feather';
 
 function HeroSection() {
-  const whatsappLink = "https://wa.me/27820000000?text=Hi+Jobsta";
+  const whatsappLink = "https://wa.me/14155238886?text=Hi+Jobsta";
 
   return (
     <section className="min-h-[90vh] bg-white flex items-center justify-center px-4 py-20">
