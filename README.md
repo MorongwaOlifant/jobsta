@@ -4,11 +4,11 @@ A simple WhatsApp-based job alert system built for portfolio demo. Jobseekers ch
 
 ## Features
 
-✅ **WhatsApp Bot Conversation**: Users answer 9 questions to build their job profile
-✅ **MongoDB Storage**: All user data saved securely in database
-✅ **Job Alerts**: Send personalized job matches via WhatsApp (manual or automated)
-✅ **Web Form Backup**: Alternative signup via website form
-✅ **Twilio Integration**: Reliable WhatsApp messaging through Twilio API
+**WhatsApp Bot Conversation**: Users answer 9 questions to build their job profile
+**MongoDB Storage**: All user data saved securely in database
+**Job Alerts**: Send personalized job matches via WhatsApp (manual or automated)
+**Web Form Backup**: Alternative signup via website form
+**Twilio Integration**: Reliable WhatsApp messaging through Twilio API
 
 ## Tech Stack
 
